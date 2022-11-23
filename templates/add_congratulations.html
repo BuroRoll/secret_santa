@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/add_congratulations.css') }}">
+    <link rel="shortcut icon" href="favicon.ico" type="image/png">      <!-- title logotype -->
+
+    <title>Отправление поздравления</title>
+</head>
+<body>
+<img src="{{ url_for('static', filename='images/mesh.png') }}" alt="bg" class="tree">
+<div class="block">
+    <p class="snowballs_counter">Вам доступно X снежков</p>
+    <p class="sender_mail_text">Электронная почта отправителя:</p>
+    <input tab-index="1" type="text" class="line sender_mail_input" maxlength="50" id="sender_mail_input">
+
+    <p class="text_to_send">Поздравление</p>
+    <p class="restriction">(Ограничение 72 символа)</p>
+
+    <hr class="dot_line" id="first_line">
+    <hr class="dot_line" id="second_line">
+    <hr class="dot_line" id="third_line">
+    <textarea tab-index="2" name="congratulation" id="congratulation" cols="20" rows="3" maxlength="72"></textarea>
+    <p class="receiver_mail_text">Электронная почта получателя:</p>
+    <input tab-index="3" type="text" class="line receiver_mail_input" maxlength="35">
+    <button class="btn center-btn">Отправить</button>
+</div>
+
+</body>
+</html>
